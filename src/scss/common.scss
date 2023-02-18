@@ -1,0 +1,37 @@
+@import '_variables';
+/* -------------------------------------------
+  components
+------------------------------------------- */
+
+@media screen and (max-width: 750px) {
+}
+
+/* -------------------------------------------
+  utility
+------------------------------------------- */
+.align-left {
+  text-align: left !important;
+}
+
+.pc-only {
+  display: block;
+}
+.sp-only {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: block;
+  }
+}
+
+a.hover-opacity {
+  &:hover {
+    opacity: 0.5;
+    transition-duration: 0.3s;
+  }
+}

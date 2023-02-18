@@ -1,0 +1,38 @@
+/* -------------------------------------------
+  components
+------------------------------------------- */
+/* -------------------------------------------
+  utility
+------------------------------------------- */
+.align-left
+{
+    text-align: left !important;
+}
+
+.pc-only
+{
+    display: block;
+}
+
+.sp-only
+{
+    display: none;
+}
+
+@media screen and (max-width: 750px)
+{
+    .pc-only
+    {
+        display: none;
+    }
+    .sp-only
+    {
+        display: block;
+    }
+}
+a.hover-opacity:hover
+{
+    transition-duration: .3s;
+
+    opacity: .5;
+}

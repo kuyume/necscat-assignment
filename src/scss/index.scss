@@ -1,0 +1,242 @@
+@import '_variables';
+
+/* -------------------------------------------
+  common
+------------------------------------------- */
+body {
+  font-family: $noto-sans;
+}
+
+/* -------------------------------------------
+  components
+------------------------------------------- */
+.common-title {
+  font-weight: 700;
+  font-size: vw-liq(48);
+  line-height: 1;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.common-link {
+  display: inline-block;
+  border-radius: vw-liq(4);
+  margin: 0 auto;
+  padding: vw-liq(16) vw-liq(80);
+  font-size: vw-liq(16);
+  font-weight: 700;
+  line-height: calc(27.2 / 16);
+}
+
+.common-desc {
+  font-size: vw-liq(16);
+  line-height: calc(27.2 / 16);
+}
+
+/* -------------------------------------------
+  web3_0
+------------------------------------------- */
+.web3_0 {
+  padding: vw-liq(81) 0;
+  text-align: center;
+
+  &-title {
+    color: $black;
+  }
+
+  &-list {
+    width: vw-liq(1080);
+    margin: vw-liq(47) auto 0;
+
+    &-item {
+      height: vw-liq(324);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      &:not(:last-of-type) {
+        margin-bottom: vw-liq(80);
+      }
+
+      picture {
+        width: 50%;
+      }
+
+      &-title {
+        width: calc(500 / 1080 * 100%);
+        color: $black;
+        font-weight: 700;
+        font-size: vw-liq(32);
+        line-height: 1.5;
+        text-align: left;
+        margin-left: auto;
+      }
+
+      &-desc {
+        width: calc(500 / 1080 * 100%);
+        color: $black;
+        text-align: left;
+        margin-top: vw-liq(16);
+        margin-left: auto;
+      }
+
+      &.reverse {
+        picture {
+          order: 1;
+          margin-left: auto;
+        }
+
+        .web3_0-list-item-title {
+          margin-left: 0;
+          margin-right: auto;
+        }
+
+        .web3_0-list-item-desc {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  &-morelink {
+    background-color: $black;
+    color: $white;
+    margin-top: vw-liq(80);
+  }
+}
+
+/* -------------------------------------------
+  contact
+------------------------------------------- */
+.contact {
+  background-image: url(../images/contact-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: vw-liq(81) 0;
+  text-align: center;
+
+  &-title {
+    color: $white;
+  }
+
+  &-desc {
+    color: $white;
+    margin-top: vw-liq(48);
+  }
+
+  &-morelink {
+    background-color: $white;
+    margin-top: vw-liq(40);
+    color: $black;
+  }
+}
+
+/* -------------------------------------------
+  components（SP）
+------------------------------------------- */
+@media screen and (max-width: ($breakpoint-sp * 1px)) {
+  .common-title {
+    font-size: vw(64);
+    text-underline-offset: 0.2em;
+  }
+
+  .common-link {
+    width: vw(670);
+    border-radius: vw(4);
+    padding: vw(32) 0;
+    font-size: vw(32);
+    line-height: calc(27.2 / 16);
+  }
+
+  .common-desc {
+    font-size: vw(32);
+  }
+}
+
+/* -------------------------------------------
+  web3_0（SP）
+------------------------------------------- */
+@media screen and (max-width: ($breakpoint-sp * 1px)) {
+  .web3_0 {
+    padding: vw(101) 0;
+
+    &-list {
+      width: vw(670);
+      margin: vw(96) auto 0;
+
+      &-item {
+        height: auto;
+
+        &:not(:last-of-type) {
+          margin-bottom: vw(155);
+        }
+
+        picture {
+          width: vw(670);
+          order: 2;
+          margin-top: vw(31);
+        }
+
+        &-title {
+          width: 100%;
+          font-size: vw(40);
+          line-height: 1.5;
+          text-align: center;
+          order: 1;
+        }
+
+        &-desc {
+          width: vw(662);
+          text-align: left;
+          margin-top: vw(49);
+          margin-left: auto;
+          order: 3;
+        }
+
+        &.reverse {
+          picture {
+            order: 2;
+          }
+
+          .web3_0-list-item-title {
+            order: 1;
+          }
+
+          .web3_0-list-item-desc {
+            order: 3;
+            margin-left: auto;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &-morelink {
+      background-color: $black;
+      color: $white;
+      margin-top: vw(80);
+    }
+  }
+}
+
+/* -------------------------------------------
+  contact（SP）
+------------------------------------------- */
+@media screen and (max-width: ($breakpoint-sp * 1px)) {
+  .contact {
+    background-image: url(../images/sp/contact-bg_sp.jpg);
+    padding: vw(101) 0;
+
+    &-desc {
+      margin-top: vw(96);
+    }
+
+    &-morelink {
+      margin-top: vw(82);
+    }
+  }
+}

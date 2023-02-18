@@ -1,0 +1,24 @@
+// theme-colors
+$black: #000000;
+$white: #ffffff;
+
+// fonts
+$noto-sans: 'Noto Sans JP', sans-serif;
+
+// breakpoints
+$breakpoint-pc: 1440;
+$breakpoint-sp: 750;
+
+// vw-liq
+@function vw-liq($size: 10) {
+  @if $size >= 0 {
+    @return min($size * 1px, calc($size / $breakpoint-pc * 100vw));
+  } @else {
+    @return max($size * 1px, calc($size / $breakpoint-pc * 100vw));
+  }
+}
+
+// vw-sp
+@function vw($size: 10) {
+  @return calc($size / $breakpoint-sp * 100vw);
+}

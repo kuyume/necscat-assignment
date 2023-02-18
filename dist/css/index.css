@@ -1,0 +1,278 @@
+@charset 'UTF-8';
+/* -------------------------------------------
+  common
+------------------------------------------- */
+body
+{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* -------------------------------------------
+  components
+------------------------------------------- */
+.common-title
+{
+    font-size: min(48px, 3.3333333333vw);
+    font-weight: 700;
+    line-height: 1;
+
+    text-align: center;
+    text-decoration: underline;
+
+    text-underline-offset: .14em;
+}
+
+.common-link
+{
+    font-size: min(16px, 1.1111111111vw);
+    font-weight: 700;
+    line-height: 1.7;
+
+    display: inline-block;
+
+    margin: 0 auto;
+    padding: min(16px, 1.1111111111vw) min(80px, 5.5555555556vw);
+
+    border-radius: min(4px, .2777777778vw);
+}
+
+.common-desc
+{
+    font-size: min(16px, 1.1111111111vw);
+    line-height: 1.7;
+}
+
+/* -------------------------------------------
+  web3_0
+------------------------------------------- */
+.web3_0
+{
+    padding: min(81px, 5.625vw) 0;
+
+    text-align: center;
+}
+.web3_0-title
+{
+    color: #000;
+}
+.web3_0-list
+{
+    width: min(1080px, 75vw);
+    margin: min(47px, 3.2638888889vw) auto 0;
+}
+.web3_0-list-item
+{
+    display: flex;
+    flex-direction: column;
+
+    height: min(324px, 22.5vw);
+
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.web3_0-list-item:not(:last-of-type)
+{
+    margin-bottom: min(80px, 5.5555555556vw);
+}
+.web3_0-list-item picture
+{
+    width: 50%;
+}
+.web3_0-list-item-title
+{
+    font-size: min(32px, 2.2222222222vw);
+    font-weight: 700;
+    line-height: 1.5;
+
+    width: 46.2962962963%;
+    margin-left: auto;
+
+    text-align: left;
+
+    color: #000;
+}
+.web3_0-list-item-desc
+{
+    width: 46.2962962963%;
+    margin-top: min(16px, 1.1111111111vw);
+    margin-left: auto;
+
+    text-align: left;
+
+    color: #000;
+}
+.web3_0-list-item.reverse picture
+{
+    margin-left: auto;
+
+    order: 1;
+}
+.web3_0-list-item.reverse .web3_0-list-item-title
+{
+    margin-right: auto;
+    margin-left: 0;
+}
+.web3_0-list-item.reverse .web3_0-list-item-desc
+{
+    margin-right: auto;
+    margin-left: 0;
+}
+.web3_0-morelink
+{
+    margin-top: min(80px, 5.5555555556vw);
+
+    color: #fff;
+    background-color: #000;
+}
+
+/* -------------------------------------------
+  contact
+------------------------------------------- */
+.contact
+{
+    padding: min(81px, 5.625vw) 0;
+
+    text-align: center;
+
+    background-image: url(../images/contact-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.contact-title
+{
+    color: #fff;
+}
+.contact-desc
+{
+    margin-top: min(48px, 3.3333333333vw);
+
+    color: #fff;
+}
+.contact-morelink
+{
+    margin-top: min(40px, 2.7777777778vw);
+
+    color: #000;
+    background-color: #fff;
+}
+
+/* -------------------------------------------
+  components（SP）
+------------------------------------------- */
+@media screen and (max-width: 750px)
+{
+    .common-title
+    {
+        font-size: 8.5333333333vw;
+
+        text-underline-offset: .2em;
+    }
+    .common-link
+    {
+        font-size: 4.2666666667vw;
+        line-height: 1.7;
+
+        width: 89.3333333333vw;
+        padding: 4.2666666667vw 0;
+
+        border-radius: .5333333333vw;
+    }
+    .common-desc
+    {
+        font-size: 4.2666666667vw;
+    }
+}
+/* -------------------------------------------
+  web3_0（SP）
+------------------------------------------- */
+@media screen and (max-width: 750px)
+{
+    .web3_0
+    {
+        padding: 13.4666666667vw 0;
+    }
+    .web3_0-list
+    {
+        width: 89.3333333333vw;
+        margin: 12.8vw auto 0;
+    }
+    .web3_0-list-item
+    {
+        height: auto;
+    }
+    .web3_0-list-item:not(:last-of-type)
+    {
+        margin-bottom: 20.6666666667vw;
+    }
+    .web3_0-list-item picture
+    {
+        width: 89.3333333333vw;
+        margin-top: 4.1333333333vw;
+
+        order: 2;
+    }
+    .web3_0-list-item-title
+    {
+        font-size: 5.3333333333vw;
+        line-height: 1.5;
+
+        width: 100%;
+
+        text-align: center;
+
+        order: 1;
+    }
+    .web3_0-list-item-desc
+    {
+        width: 88.2666666667vw;
+        margin-top: 6.5333333333vw;
+        margin-left: auto;
+
+        text-align: left;
+
+        order: 3;
+    }
+    .web3_0-list-item.reverse picture
+    {
+        order: 2;
+    }
+    .web3_0-list-item.reverse .web3_0-list-item-title
+    {
+        order: 1;
+    }
+    .web3_0-list-item.reverse .web3_0-list-item-desc
+    {
+        margin-right: 0;
+        margin-left: auto;
+
+        order: 3;
+    }
+    .web3_0-morelink
+    {
+        margin-top: 10.6666666667vw;
+
+        color: #fff;
+        background-color: #000;
+    }
+}
+/* -------------------------------------------
+  contact（SP）
+------------------------------------------- */
+@media screen and (max-width: 750px)
+{
+    .contact
+    {
+        padding: 13.4666666667vw 0;
+
+        background-image: url(../images/sp/contact-bg_sp.jpg);
+    }
+    .contact-desc
+    {
+        margin-top: 12.8vw;
+    }
+    .contact-morelink
+    {
+        margin-top: 10.9333333333vw;
+    }
+}
